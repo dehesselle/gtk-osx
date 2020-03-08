@@ -225,7 +225,7 @@ export WORKON_HOME="$DEVPREFIX/share/venv"
 
 $PIPENV install
 
-BASEURL="https://gitlab.gnome.org/GNOME/gtk-osx/raw/master"
+BASEURL="https://raw.githubusercontent.com/dehesselle/gtk-osx/inkscape-1.0.x-1"
 
 config_dir=""
 if test -n "$XDG_CONFIG_HOME"; then
@@ -237,10 +237,12 @@ if test ! -d "$config_dir"; then
     mkdir -p "$config_dir"
 fi
 
-if test -e "$HOME/.jhbuildrc"; then
-    JHBUILDRC="$HOME/.jhbuildrc"
-else
-    JHBUILDRC="$config_dir/jhbuildrc"
+if test -z "$JHBUILDRC"; then   # allow to override
+  if test -e "$HOME/.jhbuildrc"; then
+      JHBUILDRC="$HOME/.jhbuildrc"
+  else
+      JHBUILDRC="$config_dir/jhbuildrc"
+  fi
 fi
 echo "Installing jhbuild configuration at $JHBUILDRC"
 curl -ks $BASEURL/jhbuildrc-gtk-osx -o "$JHBUILDRC"

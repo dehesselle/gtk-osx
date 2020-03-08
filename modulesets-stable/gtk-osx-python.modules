@@ -82,7 +82,7 @@
               module="2.7.16/Python-2.7.16.tar.xz" version="2.7.16"
               hash="sha256:f222ef602647eecb6853681156d32de4450a2c39f4de93bd5b20235f2e660ed7">
   <!-- related to https://bugs.python.org/issue11445 -->
-  <patch file="https://gitlab.gnome.org/GNOME/gtk-osx/raw/master/patches/python-ldflags.patch" strip="1"/>
+  <patch file="https://raw.githubusercontent.com/dehesselle/gtk-osx/inkscape-1.0.x-1/patches/python-ldflags.patch" strip="1"/>
     </branch>
     <dependencies>
       <dep package="gettext-runtime"/>
@@ -96,7 +96,7 @@
 
   <autotools id="python3" autogenargs="--enable-shared" autogen-sh="autoreconf">
     <branch repo="python" module="3.6.8/Python-3.6.8.tar.xz" version="3.6.8">
-      <patch file="https://gitlab.gnome.org/GNOME/gtk-osx/raw/master/patches/Python3.6-stack-size-flag.patch" strip="1"/>
+      <patch file="https://raw.githubusercontent.com/dehesselle/gtk-osx/inkscape-1.0.x-1/patches/Python3.6-stack-size-flag.patch" strip="1"/>
     </branch>
     <dependencies>
       <dep package="gettext-runtime"/>
@@ -144,7 +144,7 @@
     <branch version="2.28.7" module="pygobject/2.28/pygobject-2.28.7.tar.xz"
             hash="sha256:bb9d25a3442ca7511385a7c01b057492095c263784ef31231ffe589d83a96a5a">
       <!-- remove all references to the missing gdestktopappinfo -->
-      <patch file="https://gitlab.gnome.org/GNOME/gtk-osx/raw/master/patches/pygobject-gdesktopappinfo-missing.patch"
+      <patch file="https://raw.githubusercontent.com/dehesselle/gtk-osx/inkscape-1.0.x-1/patches/pygobject-gdesktopappinfo-missing.patch"
                      strip="1"/>
     </branch>
     <dependencies>
@@ -172,8 +172,8 @@
 	     autogenargs="CFLAGS=&quot;$CFLAGS -xobjective-c&quot; lt_cv_sys_global_symbol_pipe=&quot;'sed -n -e '\''s/^.*[ ]\([BCDEGRST][BCDEGRST]*\)[ ][ ]*_\([_A-Za-z][_A-Za-z0-9]*\)$/\1 _\2 \2/p'\'' | sed '\''/ __gnu_lto/d'\'''&quot;">
     <branch version="2.24.0" module="pygtk/2.24/pygtk-2.24.0.tar.bz2"
             hash="sha256:cd1c1ea265bd63ff669e92a2d3c2a88eb26bcd9e5363e0f82c896e649f206912">
-      <patch file="https://gitlab.gnome.org/GNOME/gtk-osx/raw/master/patches/pygtk-libtool.patch" strip="1"/>
-      <patch file="https://gitlab.gnome.org/GNOME/gtk-osx/raw/master/patches/pygtk-pango1.4x.patch" strip="1"/>
+      <patch file="https://raw.githubusercontent.com/dehesselle/gtk-osx/inkscape-1.0.x-1/patches/pygtk-libtool.patch" strip="1"/>
+      <patch file="https://raw.githubusercontent.com/dehesselle/gtk-osx/inkscape-1.0.x-1/pygtk-pango1.4x.patch" strip="1"/>
     </branch>
     <dependencies>
       <dep package="pygobject"/>

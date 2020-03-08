@@ -88,7 +88,7 @@
   <autotools id="itstool" autogen-sh="configure">
     <branch module="itstool/itstool-2.0.6.tar.bz2" version="2.0.6n"
             repo="itstool">
-      <patch file="https://gitlab.gnome.org/GNOME/gtk-osx/raw/master/patches/itstool-config-python.patch" strip="1"/>
+      <patch file="https://raw.githubusercontent.com/dehesselle/gtk-osx/inkscape-1.0.x-1/patches/itstool-config-python.patch" strip="1"/>
     </branch>
     <dependencies>
       <dep package="libxml2"/>
@@ -138,7 +138,7 @@
 
   <autotools id="ragel" autogen-sh='autoreconf'>
     <branch repo="ragel" module="ragel-6.10.tar.gz" version="6.10">
-      <patch file="https://gitlab.gnome.org/GNOME/gtk-osx/raw/master/patches/ragel-6.9-setiosflags.patch" strip="1"/>
+      <patch file="https://raw.githubusercontent.com/dehesselle/gtk-osx/inkscape-1.0.x-1/patches/ragel-6.9-setiosflags.patch" strip="1"/>
     </branch>
   </autotools>
 
