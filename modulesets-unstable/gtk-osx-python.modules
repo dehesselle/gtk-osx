@@ -55,10 +55,10 @@
   </autotools>
 
   <autotools id="python" autogenargs="--enable-shared" supports-non-srcdir-builds="no"
-	     autogen-sh="autoreconf">
+             autogen-sh="autoreconf">
     <branch repo="python"
-           module="2.7.16/Python-2.7.16.tar.xz" version="2.7.16"
-           hash="sha256:f222ef602647eecb6853681156d32de4450a2c39f4de93bd5b20235f2e660ed7">
+            module="2.7.17/Python-2.7.17.tgz" version="2.7.17"
+            hash="sha256:f22059d09cdf9625e0a7284d24a13062044f5bf59d93a7f3382190dfa94cecde">
         <!-- related to https://bugs.python.org/issue11445 -->
         <patch file="https://gitlab.gnome.org/GNOME/gtk-osx/raw/master/patches/python-ldflags.patch" strip="1"/>
     </branch>
@@ -73,10 +73,9 @@
   </autotools>
 
   <autotools id="python3" autogenargs="--enable-shared" autogen-sh="autoreconf">
-    <branch repo="python"
-	    module="3.6.8/Python-3.6.8.tar.xz" version="3.6.8">
-      <patch file="https://gitlab.gnome.org/GNOME/gtk-osx/raw/master/patches/Python3.6-stack-size-flag.patch" strip="1"/>
-    </branch>
+    <branch repo="python" module="3.8.2/Python-3.8.2.tar.xz" version="3.8.2"
+            hash="sha256:2646e7dc233362f59714c6193017bb2d6f7b38d6ab4a0cb5fbac5c36c4d845df"
+            />
     <dependencies>
       <dep package="gettext-runtime"/>
       <dep package='readline'/>
@@ -101,7 +100,7 @@
     </after>
   </distutils>
 
- <distutils id="pycairo" >
+ <meson id="pycairo" >
     <branch module="pygobject/pycairo" repo="github" />
     <dependencies>
       <dep package="cairo"/>
@@ -112,7 +111,7 @@
       <dep package="meta-gtk-osx-core"/>
       <dep package="meta-gtk-osx-gtk3"/>
     </after>
- </distutils>
+ </meson>
 
   <autotools id="pygobject" autogenargs="--disable-introspection"
 	     supports-non-srcdir-builds="no">
@@ -123,7 +122,7 @@
    </dependencies>
   </autotools>
 
-  <distutils id="pygobject3" >
+  <meson id="pygobject3" >
     <branch module="pygobject" checkoutdir="pygobject3"/>
     <dependencies>
       <dep package="pycairo"/>
@@ -133,7 +132,7 @@
      <dep package="python3"/>
       <dep package="python"/>
    </after>
-  </distutils>
+  </meson>
 
   <autotools id="pygtk" autogenargs="--disable-introspection">
     <branch />
