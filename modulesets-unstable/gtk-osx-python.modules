@@ -50,7 +50,7 @@
 
     <branch module="berkeley-db/db-4.8.30.NC.tar.gz" version="4.8.30"
         repo="oracle">
-      <patch file="https://raw.githubusercontent.com/narkoleptik/os-x-berkeleydb-patch/master/atomic.patch" strip='1'/>
+      <patch file="https://raw.githubusercontent.com/dehesselle/gtk-osx/inkscape-1.0.x-2/patches/atomic.patch" strip='1'/>
     </branch>
   </autotools>
 
@@ -60,7 +60,7 @@
             module="2.7.17/Python-2.7.17.tgz" version="2.7.17"
             hash="sha256:f22059d09cdf9625e0a7284d24a13062044f5bf59d93a7f3382190dfa94cecde">
         <!-- related to https://bugs.python.org/issue11445 -->
-        <patch file="https://gitlab.gnome.org/GNOME/gtk-osx/raw/master/patches/python-ldflags.patch" strip="1"/>
+        <patch file="https://raw.githubusercontent.com/dehesselle/gtk-osx/inkscape-1.0.x-2/patches/python-ldflags.patch" strip="1"/>
     </branch>
     <dependencies>
       <dep package="gettext-runtime"/>
