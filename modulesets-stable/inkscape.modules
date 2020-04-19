@@ -53,7 +53,7 @@
   </autotools>
 
   <!-- Enchant https://abiword.github.io/enchant/ -->
-  <autotools id="enchant" autogen-sh="configure">
+  <autotools id="enchant2" autogen-sh="configure">
     <branch module="AbiWord/enchant/releases/download/v2.2.8/enchant-2.2.8.tar.gz"
             version="2.2.8"
             hash="sha256:c7b5e2853f0dd0b1aafea2f9e071941affeec3a76df8e3f6d67a718c89293555"
@@ -89,6 +89,8 @@
             hash="sha256:57442acf8b46453a9b5fc6fec738fbbb7e13a3d3e00f1aaaa0975529bc203c7c"
             repo="github_tarball">
       <patch file="https://raw.githubusercontent.com/dehesselle/gtk-osx/inkscape-1.0.x-3/patches/ghostscript_configure_libtiff.patch"
+             strip="1"/>
+      <patch file="https://raw.githubusercontent.com/dehesselle/gtk-osx/inkscape-1.0.x-3/patches/ghostscript_configure_fontconfig.patch"
              strip="1"/>
     </branch>
     <dependencies>
@@ -134,7 +136,7 @@
             hash="sha256:5ae514dd0216be069176accf6d0049d6a01cfa6a50df4bc06be85f7080b62de8">
     </branch>
     <dependencies>
-      <dep package="enchant"/>
+      <dep package="enchant2"/>
       <dep package="glib"/>
       <dep package="gtk+-3.0"/>
     </dependencies>
