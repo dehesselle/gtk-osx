@@ -74,7 +74,7 @@
             module="libgcrypt"/> -->
     <branch repo="ftp.gnupg.org" version="1.7.6"
             module="gcrypt/libgcrypt/libgcrypt-1.7.6.tar.bz2">
-            <patch file="https://raw.githubusercontent.com/dehesselle/gtk-osx/inkscape-1.0.x-2/patches/libgcrypt-cflags-for-build.patch"
+            <patch file="https://raw.githubusercontent.com/dehesselle/gtk-osx/inkscape-1.0.x-3/patches/libgcrypt-cflags-for-build.patch"
        strip="1"/>
     </branch>
     <dependencies>

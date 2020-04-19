@@ -93,7 +93,7 @@
   <autotools id="bison" autogen-sh="configure">
     <branch repo="ftp.gnu.org" module="bison/bison-3.0.4.tar.xz"
             version="3.0.4">
-      <patch file="https://raw.githubusercontent.com/dehesselle/gtk-osx/inkscape-1.0.x-2/patches/bison-3.0.4-vasnprintf.patch" strip="1"/>
+      <patch file="https://raw.githubusercontent.com/dehesselle/gtk-osx/inkscape-1.0.x-3/patches/bison-3.0.4-vasnprintf.patch" strip="1"/>
     </branch>
     <dependencies>
       <dep package='flex'/>

@@ -86,7 +86,7 @@ class _cmd_bootstrap_gtk_osx(jhbuild.commands.base.cmd_build):
                                           moduleset + '.modules'))):
             config.moduleset = moduleset
         else:
-            config.moduleset = 'https://raw.githubusercontent.com/dehesselle/gtk-osx/inkscape-1.0.x-2/modulesets-stable/bootstrap.modules'
+            config.moduleset = 'https://raw.githubusercontent.com/dehesselle/gtk-osx/inkscape-1.0.x-3/modulesets-stable/bootstrap.modules'
 
         args = ['meta-bootstrap']
 
@@ -384,7 +384,7 @@ def setup_sdk(target=_target, sdk_version=None, architectures=[_default_arch]):
 # Moduleset to use. You can override this in .jhbuildrc-custom or on
 # the command line.
 #
-moduleset = 'https://raw.githubusercontent.com/dehesselle/gtk-osx/inkscape-1.0.x-2/modulesets-stable/gtk-osx.modules'
+moduleset = 'https://raw.githubusercontent.com/dehesselle/gtk-osx/inkscape-1.0.x-3/modulesets-stable/gtk-osx.modules'
 use_local_modulesets = False
 modulesets_dir = ""
 
