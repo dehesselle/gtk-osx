@@ -3,12 +3,21 @@
 <?xml-stylesheet type="text/xsl" href="moduleset.xsl"?>
 <moduleset>
   <repository type="tarball" name="ftp_gnome" href="http://ftp.gnome.org/pub/GNOME/sources/" default="yes"/>
-  <repository type="tarball" name="ftp_gnu" href="https://ftp.gnu.org/gnu/"/>
-  <repository type="tarball" name="github_tarball" href="https://github.com/"/>
+  <repository type="tarball" name="ftp_gnu" href="http://ftp.halifax.rwth-aachen.de/gnu/"/>
   <repository type="tarball" name="gitlab_freedesktop_tarball" href="https://gitlab.freedesktop.org/"/>
   <repository type="tarball" name="gitlab_gnome_tarball" href="https://gitlab.gnome.org/GNOME/"/>
+  <repository type="tarball" name="github_tarball" href="https://github.com/"/>
   <repository type="tarball" name="libreoffice" href="https://dev-www.libreoffice.org/src/"/>
   <repository type="tarball" name="sourceforge" href="https://netcologne.dl.sourceforge.net/project/"/>
+
+  <!--
+          - Dependencies marked with TODO have not been investigated yet.
+            Maybe there are no dependencies or maybe they need to be added.
+
+          - enchant v2.x collides with the enchant package from gtk-osx
+            module set. Breaks gtkspell3. Once migration to gspell happens,
+            this will turn into a non-issue.
+  -->
 
   <!-- https://github.com/ivmai/bdwgc -->
   <autotools id="boehm_gc" autogen-sh="configure">
@@ -234,9 +243,7 @@
   </cmake>
 
   <!-- Potrace http://potrace.sourceforge.net -->
-  <autotools id="potrace"
-             autogen-sh="configure"
-             autogenargs="--with-libpotrace">
+  <autotools id="potrace" autogen-sh="configure" autogenargs="--with-libpotrace">
     <branch module="potrace/1.16/potrace-1.16.tar.gz"
             version="1.16"
             hash="sha256:be8248a17dedd6ccbaab2fcc45835bb0502d062e40fbded3bc56028ce5eb7acc"
