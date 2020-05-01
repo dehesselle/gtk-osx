@@ -101,6 +101,11 @@
              strip="1"/>
       <patch file="https://raw.githubusercontent.com/dehesselle/gtk-osx/inkscape-1.0.x-3/patches/ghostscript_configure_fontconfig.patch"
              strip="1"/>
+      <!--  required on Catalina 10.15.4, XCode 11.4.1
+            not required on Mojave 10.14.6, XCode 11.3.1
+      -->
+      <patch file="https://raw.githubusercontent.com/dehesselle/gtk-osx/inkscape-1.0.x-3/patches/ghostscript_link_cupsimage.patch"
+             strip="1"/>
     </branch>
     <dependencies>
       <!-- TODO
