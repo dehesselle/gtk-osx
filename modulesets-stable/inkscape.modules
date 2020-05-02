@@ -2,6 +2,7 @@
 <!DOCTYPE moduleset SYSTEM "moduleset.dtd">
 <?xml-stylesheet type="text/xsl" href="moduleset.xsl"?>
 <moduleset>
+  <repository type="tarball" name="bintray" href="https://dl.bintray.com/"/>
   <repository type="tarball" name="ftp_gnome" href="http://ftp.gnome.org/pub/GNOME/sources/" default="yes"/>
   <repository type="tarball" name="ftp_gnu" href="http://ftp.halifax.rwth-aachen.de/gnu/"/>
   <repository type="tarball" name="gitlab_freedesktop_tarball" href="https://gitlab.freedesktop.org/"/>
@@ -25,6 +26,18 @@
             version="8.0.4"
             hash="sha256:436a0ddc67b1ac0b0405b61a9675bca9e075c8156f4debd1d06f3a56c7cd289d"
             repo="github_tarball">
+    </branch>
+  </autotools>
+
+  <!-- https://www.boost.org -->
+  <autotools id="boost" autogen-sh="bootstrap.sh" autogenargs="--without-libraries=python">
+    <branch module="boostorg/release/1.72.0/source/boost_1_72_0.tar.bz2"
+            version="1.72.0"
+            hash="sha256:59c9b274bc451cf91a9ba1dd2c7fdcaf5d60b1b3aa83f2c9fa143417cc660722"
+            repo="bintray">
+      <!-- This patch provides a fake Makefile so we can integrate with autotools here. -->
+      <patch file="https://raw.githubusercontent.com/dehesselle/gtk-osx/inkscape-1.0.x-4/patches/boost_makefile.patch"
+             strip="1"/>
     </branch>
   </autotools>
 
@@ -104,7 +117,7 @@
       <!--  required on Catalina 10.15.4, XCode 11.4.1
             not required on Mojave 10.14.6, XCode 11.3.1
       -->
-      <patch file="https://raw.githubusercontent.com/dehesselle/gtk-osx/inkscape-1.0.x-3/patches/ghostscript_link_cupsimage.patch"
+      <patch file="https://raw.githubusercontent.com/dehesselle/gtk-osx/inkscape-1.0.x-4/patches/ghostscript_link_cupsimage.patch"
              strip="1"/>
     </branch>
     <dependencies>
@@ -181,9 +194,7 @@
             checkoutdir="libcdr">
     </branch>
     <dependencies>
-      <!-- for documentational purposes only, boost is not part of the module set
       <dep package="boost"/>
-      -->
       <dep package="icu"/>
       <dep package="lcms"/>
       <dep package="librevenge"/>
