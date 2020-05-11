@@ -57,6 +57,7 @@ envvar DEV_SRC_ROOT "$DEVROOT/Source"
 envvar PYENV_INSTALL_ROOT "$DEV_SRC_ROOT/pyenv"
 envvar PYENV_ROOT "$DEVPREFIX/share/pyenv"
 envvar PIP_CONFIG_DIR "$HOME/.config/pip"
+envvar SDKROOT "`xcrun --show-sdk-path`"
 
 export PYTHONWARNINGS=ignore:DEPRECATION::pip._internal.cli.base_command
 export PYTHONPATH="$PYTHONUSERBASE/lib/python/site-packages":"$PYTHONPATH"
@@ -210,8 +211,6 @@ fi
 # pipenv wants enum34 because it's installed with Py2 but that conflicts
 # with Py3 so remove it.
 pip_remove enum34
-
-SDKROOT=`xcrun --show-sdk-path`
 
 export PIPENV_DOTENV_LOCATION="$DEVPREFIX/etc/pipenv-env"
 export PIPENV_PIPFILE="$DEVPREFIX/etc/Pipfile"
