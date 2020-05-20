@@ -224,7 +224,7 @@ export WORKON_HOME="$DEVPREFIX/share/venv"
 
 $PIPENV install
 
-BASEURL="https://raw.githubusercontent.com/dehesselle/gtk-osx/inkscape-1.0.x-4"
+BASEURL="https://raw.githubusercontent.com/dehesselle/gtk-osx/inkscape-1.0.x-5"
 
 config_dir=""
 if test -n "$XDG_CONFIG_HOME"; then
