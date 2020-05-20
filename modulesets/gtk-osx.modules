@@ -60,21 +60,15 @@
     <dependencies>
       <dep package="gtk+-3.0"/>
       <dep package="gtk-mac-integration"/>
+      <dep package="adwaita-icon-theme"/>
     </dependencies>
     <after>
       <dep package="meta-gtk-osx-bootstrap"/>
     </after>
   </metamodule>
 
-  <systemmodule id="meson">
-    <branch repo="system" version="0.49.2"/>
-    <systemdependencies>
-      <dep type="path" name="meson"/>
-    </systemdependencies>
-  </systemmodule>
-
   <autotools id="glib" autogenargs="--with-pcre=internal">
-    <branch tag="glib-2-62"/>
+    <branch tag="glib-2-64"/>
     <dependencies>
       <dep package="libffi"/>
     </dependencies>
@@ -85,11 +79,11 @@
 
   <autotools id="libffi" autogenargs="--disable-builddir"
              autogen-sh="autoreconf" supports-non-srcdir-builds="no">
-    <branch module="atgreen/libffi" repo="github" tag="v3.2.1"/>
+    <branch module="atgreen/libffi" repo="github" tag="v3.3"/>
   </autotools>
 
   <meson id="gobject-introspection">
-    <branch tag="gnome-3-34" module="gobject-introspection"/>
+    <branch tag="gnome-3-36" module="gobject-introspection"/>
     <dependencies>
       <dep package="glib"/>
       <dep package="cairo"/>
@@ -98,7 +92,7 @@
   </meson>
 
   <meson id="fribidi" mesonargs="-Ddocs=false">
-    <branch module="fribidi/fribidi" repo="github" tag="v1.0.5"/>
+    <branch module="fribidi/fribidi" repo="github" tag="v1.0.9"/>
     <dependencies>
       <!--dep package="c2man"/ -->
     </dependencies>
@@ -118,7 +112,7 @@
   </meson>
 
   <meson id="atk">
-    <branch tag="gnome-3-34"/>
+    <branch tag="gnome-3-36"/>
     <dependencies>
     </dependencies>
     <after>
@@ -143,7 +137,7 @@
   </autotools>
 
   <autotools id="libepoxy">
-    <branch repo="github" module="anholt/libepoxy" revision="1.4.3"/>
+    <branch repo="github" module="anholt/libepoxy" revision="1.5.4"/>
     <dependencies>
       <dep package="xorg-util-macros"/>
     </dependencies>
@@ -212,6 +206,33 @@
       <dep package="gtk+-3.0"/>
       <dep package="meta-gtk-osx-bootstrap"/>
     </after>
+  </autotools>
+
+  <autotools id="adwaita-icon-theme">
+    <branch revision="gnome-3-30"/>
+    <dependencies>
+      <dep package="librsvg"/>
+    </dependencies>
+  </autotools>
+
+  <!-- librsvg is converting to the Rust language. This requires
+       substantial infrastructure that's resistant to installing with
+       jhbuild, so we'll freeze at the 2.40 branch. -->
+  <autotools id="librsvg" autogenargs="--disable-Bsymbolic">
+    <branch module="librsvg" tag="librsvg-2-40"/>
+    <dependencies>
+      <dep package="libcroco"/>
+      <dep package="meta-gtk-osx-freetype"/>
+    </dependencies>
+    <after>
+<!-- Circular dependency if we depend on meta-gtk-osx or meta-gtk-osx-gtk3 -->
+      <dep package="gtk+"/>
+      <dep package="gtk+-3.0"/>
+    </after>
+  </autotools>
+
+  <autotools id="libcroco" autogenargs="--disable-Bsymbolic">
+    <branch/>
   </autotools>
 
 </moduleset>
