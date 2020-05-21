@@ -101,9 +101,7 @@
              strip="1"/>
     </branch>
     <dependencies>
-      <!-- TODO
-      <dep package="package-name"/>
-      -->
+      <dep package="gnome-common"/>
     </dependencies>
   </autotools>
 
@@ -128,6 +126,12 @@
       <dep package="package-name"/>
       -->
     </dependencies>
+  </autotools>
+
+  <!-- Gnome common stuff -->
+  <autotools id="gnome-common">
+    <branch module="gnome-common/3.18/gnome-common-3.18.0.tar.xz" version="3.18.0"
+            hash="sha256:22569e370ae755e04527b76328befc4c73b62bfd4a572499fde116b8318af8cf"/>
   </autotools>
 
   <!-- Google Testing and Mocking Framework https://github.com/google/googletest -->
