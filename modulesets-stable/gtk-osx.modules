@@ -113,10 +113,8 @@
     <dependencies>
       <dep package="glib"/>
       <dep package="cairo"/>
-    </dependencies>
-    <after>
       <dep package='python3'/>
-    </after>
+    </dependencies>
   </meson>
 
   <meson id="fribidi" mesonargs="-Ddocs=false">
