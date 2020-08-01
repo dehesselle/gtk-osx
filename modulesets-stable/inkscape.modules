@@ -164,16 +164,20 @@
   </autotools>
 
   <!-- https://wiki.gnome.org/Projects/gspell -->
-  <autotools id="gspell" autogen-sh="configure">
+  <autotools id="gspell" autogen-sh="autoreconf">
     <branch module="gspell/1.8/gspell-1.8.3.tar.xz"
             version="1.8.3"
             hash="sha256:5ae514dd0216be069176accf6d0049d6a01cfa6a50df4bc06be85f7080b62de8">
+            <!-- TODO: untagged version -->
+      <patch file="https://raw.githubusercontent.com/dehesselle/gtk-osx/inkscape-1.0.x/patches/gspell_makefile_objc.patch"
+             strip="1"/>
     </branch>
     <dependencies>
       <dep package="enchant2"/>
       <dep package="glib"/>
       <dep package="gtk+-3.0"/>
       <dep package="iso-codes"/>
+      <dep package="vala"/>
     </dependencies>
   </autotools>
 

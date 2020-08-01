@@ -54,16 +54,17 @@ Libglade itself is deprecated. This is the last release. -->
     </after>
   </autotools>
 
-  <autotools id="vala" autogen-sh="configure">
-    <branch repo="ftp.gnome.org" version="0.36.1"
-            module="vala/0.36/vala-0.36.1.tar.xz"
-            hash="sha256:13f4a3f99d983bf76e8d9dd736021ecc95f53ec1f9582423aa4b4be87455aa07"/>
+  <autotools id="vala" autogen-sh="configure"
+             autogenargs="--disable-valadoc">
+    <!-- valadoc has been disabled to not pull in graphviz dependency -->
+    <branch repo="ftp.gnome.org" version="0.48.8"
+            module="vala/0.48/vala-0.48.8.tar.xz"
+            hash="sha256:c83a9b7292627bc259dae7cd414c813a48f285b4b2f4b574fa28e6af9a582ab4"/>
     <after>
       <dep package="meta-gtk-osx-bootstrap"/>
       <dep package="meta-gtk-osx-core"/>
     </after>
   </autotools>
-
 
   <autotools id="libunique" autogen-sh="configure"
              autogenargs="--without-x --disable-dbus">
