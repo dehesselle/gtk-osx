@@ -78,16 +78,16 @@
   </autotools>
 
   <!-- Enchant https://abiword.github.io/enchant/ -->
-  <autotools id="enchant2" autogen-sh="configure">
+  <autotools id="enchant2"
+             autogen-sh="configure"
+             autogenargs="--with-applespell --enable-relocatable">
     <branch module="AbiWord/enchant/releases/download/v2.2.8/enchant-2.2.8.tar.gz"
             version="2.2.8"
             hash="sha256:c7b5e2853f0dd0b1aafea2f9e071941affeec3a76df8e3f6d67a718c89293555"
             repo="github_tarball">
     </branch>
     <dependencies>
-      <!-- TODO
-      <dep package="package-name"/>
-      -->
+      <dep package="glib"/>
     </dependencies>
   </autotools>
 
