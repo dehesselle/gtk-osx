@@ -148,7 +148,7 @@ meson = {version="==0.51.1"}
 jhbuild = "$DEVPREFIX/libexec/run_jhbuild.py"
 
 [requires]
-python_version = "3.6"
+python_version = "3.7"
 EOF
     cat <<EOF > "$DEVPREFIX/etc/pipenv-env"
 export PYTHONUSERBASE="$PYTHONUSERBASE"
