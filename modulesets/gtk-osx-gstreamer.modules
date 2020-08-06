@@ -17,7 +17,7 @@
              autogenargs="-without-bmp --without-xmms --without-drm --without-mpeg4ip">
     <branch repo="sourceforge" version="2.7"
             module="faac/faad2-src/faad2-2.7/faad2-2.7.tar.bz2">
-      <patch file="https://raw.githubusercontent.com/dehesselle/gtk-osx/inkscape-1.0.x-5/patches/faad2-2.7-ac-config-headers.patch" strip="1"/>
+      <patch file="https://raw.githubusercontent.com/dehesselle/gtk-osx/inkscape-1.0.x-7/patches/faad2-2.7-ac-config-headers.patch" strip="1"/>
     </branch>
   </autotools>
 
@@ -25,7 +25,7 @@
              supports-non-srcdir-builds="no"
 	     makeargs="ERROR_CFLAGS=" >
     <branch>
-      <patch file="https://raw.githubusercontent.com/dehesselle/gtk-osx/inkscape-1.0.x-5/patches/gstreamer-fix-includes-in-gstdatetime.patch" strip="1"/>
+      <patch file="https://raw.githubusercontent.com/dehesselle/gtk-osx/inkscape-1.0.x-7/patches/gstreamer-fix-includes-in-gstdatetime.patch" strip="1"/>
     </branch>
     <after>
       <dep package="glib"/>
