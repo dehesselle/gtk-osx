@@ -11,6 +11,8 @@
   <repository type="tarball" name="libreoffice" href="https://dev-www.libreoffice.org/src/"/>
   <repository type="tarball" name="sourceforge" href="https://netcologne.dl.sourceforge.net/project/"/>
 
+  <include href="gtk-osx.modules"/>
+
   <!--
           - Dependencies marked with TODO have not been investigated yet.
             Maybe there are no dependencies or maybe they need to be added.
