@@ -67,7 +67,7 @@
        needs libxml2's python module. -->
 
   <autotools id="libxml2" autogen-sh="configure"
-             autogenargs='--libdir="$JHBUILD_LIBDIR" --with-python'>
+             autogenargs='--with-python=$JHBUILD_PREFIX/bin/python3'>
     <branch version="2.9.9" module="libxml2-2.9.9.tar.gz"
             hash="sha256:94fb70890143e3c6549f265cee93ec064c80a84c42ad0f23e85ee1fd6540a871"
 	    repo="xmlsoft.org"/>
