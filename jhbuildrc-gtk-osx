@@ -86,7 +86,7 @@ class _cmd_bootstrap_gtk_osx(jhbuild.commands.base.cmd_build):
                                           moduleset + '.modules'))):
             config.moduleset = moduleset
         else:
-            config.moduleset = 'https://raw.githubusercontent.com/dehesselle/gtk-osx/inkscape-1.1.x-1/modulesets-stable/bootstrap.modules'
+            config.moduleset = 'https://raw.githubusercontent.com/dehesselle/gtk-osx/inkscape-1.1.x-2/modulesets-stable/bootstrap.modules'
 
         args = ['meta-bootstrap']
 
