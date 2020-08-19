@@ -123,7 +123,7 @@
   <!-- Ragel, like Vala, isn't bootstrappable from git, so we might as well just use the tarball. -->
   <autotools id="ragel" autogen-sh='autoreconf'>
     <branch repo="ragel" module="ragel-6.10.tar.gz" version="6.10">
-      <patch file="https://raw.githubusercontent.com/dehesselle/gtk-osx/inkscape-1.0.x-7/patches/ragel-6.9-setiosflags.patch" strip="1"/>
+      <patch file="https://raw.githubusercontent.com/dehesselle/gtk-osx/inkscape-1.1.x-1/patches/ragel-6.9-setiosflags.patch" strip="1"/>
     </branch>
   </autotools>
 
