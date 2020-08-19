@@ -125,9 +125,13 @@
   </meson>
 
   <meson id="pango">
-    <!-- pinned to 1.43.0
-    inkscape issue: https://gitlab.com/inkscape/inkscape/issues/364
-    upstream issue: https://gitlab.gnome.org/GNOME/pango/issues/423
+    <!--
+    <branch version="1.44.7" module="pango/1.44/pango-1.44.7.tar.xz"
+            hash="sha256:66a5b6cc13db73efed67b8e933584509f8ddb7b10a8a40c3850ca4a985ea1b1f">
+
+    - pinned to 1.43.0 due to...
+        inkscape issue: https://gitlab.com/inkscape/inkscape/issues/364
+        upstream issue: https://gitlab.gnome.org/GNOME/pango/issues/423
     -->
     <branch version="1.43.0" module="pango/1.43/pango-1.43.0.tar.xz"
             hash="sha256:d2c0c253a5328a0eccb00cdd66ce2c8713fabd2c9836000b6e22a8b06ba3ddd2">
