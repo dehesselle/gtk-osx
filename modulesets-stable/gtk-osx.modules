@@ -273,6 +273,8 @@
             repo="cairographics"
             hash="sha1:00e81842ae5e81bb0343108884eb5205be0eac14">
       <patch file="https://raw.githubusercontent.com/dehesselle/gtk-osx/inkscape-1.0.x-7/patches/cairo-freetype-font-variations.patch" strip="1"/>
+      <patch file="https://raw.githubusercontent.com/dehesselle/gtk-osx/inkscape-1.0.x-10/patches/cairo-image-refcount.patch" strip="1"/>
+      <patch file="https://raw.githubusercontent.com/dehesselle/gtk-osx/inkscape-1.0.x-10/patches/cairo_pdf_add_missing_flush.patch" strip="1"/>
     </branch>
     <dependencies>
       <dep package="pixman"/>
