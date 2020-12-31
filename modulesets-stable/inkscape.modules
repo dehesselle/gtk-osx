@@ -3,7 +3,7 @@
 <?xml-stylesheet type="text/xsl" href="moduleset.xsl"?>
 <moduleset>
   <repository type="tarball" name="bintray" href="https://dl.bintray.com/"/>
-  <repository type="tarball" name="ftp_gnome" href="http://ftp.gnome.org/pub/GNOME/sources/" default="yes"/>
+  <repository type="tarball" name="ftp_gnome" href="https://ftp.fau.de/gnome/sources/" default="yes"/>
   <repository type="tarball" name="ftp_gnu" href="http://ftp.halifax.rwth-aachen.de/gnu/"/>
   <repository type="tarball" name="gitlab_freedesktop_tarball" href="https://gitlab.freedesktop.org/"/>
   <repository type="tarball" name="gitlab_gnome_tarball" href="https://gitlab.gnome.org/GNOME/"/>
